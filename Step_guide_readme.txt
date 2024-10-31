@@ -1,0 +1,1 @@
+First-commit=> creating a config package and create SpringBootCourse class inside it.and implements main class with commandLineRunner interface implement run method then create WebAppplicationContext container.
