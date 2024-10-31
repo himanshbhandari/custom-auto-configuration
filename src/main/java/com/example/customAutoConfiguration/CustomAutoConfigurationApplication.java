@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.context.WebApplicationContext;
 
 @SpringBootApplication
@@ -27,4 +28,13 @@ public class CustomAutoConfigurationApplication implements CommandLineRunner {
 		SpringBootCourse springBootCourse=container.getBean(SpringBootCourse.class);//this give bean or object of SpringBootCourse class
 		springBootCourse.showSpringBootCourseDetails();
 	}
+
+	/*previous we use @Component top of SpringBootCourse class now we creating bean here So because
+	* @SpringBootApplication annotation use internally @Configuration annotation so we create bean here also
+	 */
+	@Bean
+	SpringBootCourse springBootCourse(){
+		return new SpringBootCourse();
+	}
+
 }
