@@ -28,4 +28,10 @@ public class CustomAutoConfigurationApplication implements CommandLineRunner {
 		SpringBootCourse springBootCourse=container.getBean(SpringBootCourse.class);//this give bean or object of SpringBootCourse class
 		springBootCourse.showSpringBootCourseDetails();
 	}
+
+	//give this method name as same as which you define inside @ConditionalOnBean which is inside AppConfig
+	@Bean(name="college") // so when you specify same name here which you give @ConditionalOnBean so then you write below method name anything
+	College college(){ //if you method name here collegexyz instead of college so it doesn't work
+		return new College();
+	}
 }
