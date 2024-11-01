@@ -8,4 +8,7 @@ Fourth-commit=> remove @Configuration replace with @AutoConfiguration annotation
 
 Fifth-commit=> create one more class inside autoConfig package called UsrCondition.java So now inside our AppConfig class give @ConditionalOnClass so when we run the application because of @AutoConfiguration our AppConfig class bean going to create but it create only when UsrCondition.java class same class path which you give inside @ConditionalOnClass . you can do one thing first run and see then after deleting UsrCondition class and then run and see this "A component required a bean of type 'com.example.customAutoConfiguration.autoConfig.SpringBootCourse' that could not be found." error will come.
 
-Sixth-commit=> (we can write value=UsrCondition.class instead of name=give class path ) inside @ConditionalOnClass which is inside AppConfig class But difference between writing value or name .But value give compilation error if class is not present inside project name are'nt.
+Sixth-commit=> (we can write value=UsrCondition.class instead of name=give class path ) inside @ConditionalOnClass which is inside AppConfig class But difference between writing value or name .But value give compilation error if class is not present inside project name are'nt even class doesn't exist.
+
+
+Seventh-commit=>

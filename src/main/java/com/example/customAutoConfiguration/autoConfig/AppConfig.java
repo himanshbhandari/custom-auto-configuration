@@ -1,6 +1,7 @@
 package com.example.customAutoConfiguration.autoConfig;
 
 import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 
@@ -14,6 +15,7 @@ public class AppConfig {
     * instead of create bean inside main class now we do that creating bean n all configuration we do here
      */
 
+    @ConditionalOnBean(name="college") // this bean will only created then when our project have bean present named "college"
     @Bean
     SpringBootCourse springBootCourse(){
         return new SpringBootCourse();
