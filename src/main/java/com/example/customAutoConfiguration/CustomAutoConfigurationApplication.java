@@ -28,13 +28,4 @@ public class CustomAutoConfigurationApplication implements CommandLineRunner {
 		SpringBootCourse springBootCourse=container.getBean(SpringBootCourse.class);//this give bean or object of SpringBootCourse class
 		springBootCourse.showSpringBootCourseDetails();
 	}
-
-	/*previous we use @Component top of SpringBootCourse class now we creating bean here So because
-	* @SpringBootApplication annotation use internally @Configuration annotation so we create bean here also
-	 */
-	@Bean
-	SpringBootCourse springBootCourse(){
-		return new SpringBootCourse();
-	}
-
 }
