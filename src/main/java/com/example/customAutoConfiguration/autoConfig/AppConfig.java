@@ -1,14 +1,14 @@
 package com.example.customAutoConfiguration.autoConfig;
 
 import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 
 
-/*AutoConfiguration we only use those classes where you do wanted some automatic configuration
-    so if we want our bean which is inside this class . that beans created or configure automatically
-    so we follow same structure which spring boot follow create META-INF->spring->AutoConfiguration file
+/*I only want to trigger this AppConfig class based on condition if when i have class here called UsrCondition.java
  */
 @AutoConfiguration
+@ConditionalOnClass(name="com.example.customAutoConfiguration.autoConfig.UsrCondition")
 public class AppConfig {
     /*
     * instead of create bean inside main class now we do that creating bean n all configuration we do here
