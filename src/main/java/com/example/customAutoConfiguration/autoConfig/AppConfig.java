@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 /*I only want to trigger this AppConfig class based on condition if when i have class here called UsrCondition.java
  */
 @AutoConfiguration
-@ConditionalOnClass(name="com.example.customAutoConfiguration.autoConfig.UsrCondition")
+@ConditionalOnClass(value=UsrCondition.class)
 public class AppConfig {
     /*
     * instead of create bean inside main class now we do that creating bean n all configuration we do here
