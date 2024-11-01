@@ -3,3 +3,5 @@
 3. is spring boot created all bean when we create desktop standalone application so it create web bean also if No so how spring boot detacted?
 4. what is @ConditionalOnClass annotation do ? how it create bean conditionally?====>
 	So when @ConditionalOnClass(className.class) so if this className.class is present on class path(inside depedency pom.xml) then bean will created.
+5. @AutoConfiguration internally used @Configuration so tell difference between @Configuration and @AutoConfiguration?
+6. @Configuration(proxyBean=false) what this will do?
